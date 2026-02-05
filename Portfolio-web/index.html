@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Portfolio Website Design</title>
+    <link rel="stylesheet" href="/Portfolio-web/style.css">
+    <script defer src="/Portfolio-web/main.js"></script>
+    <!----Font awesome cdn  font icon css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+     <div class="hero-header" id="home">
+        <div class="wrapper">
+<header>
+  <div class="logo">
+    <span class="logo-letter">G</span>
+    <div class="logo-text">Gabriel Oyibo</div>
+  </div>
+
+  <nav>
+    <ul class="navlinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <button id="themeToggle" class="btn">🌙</button>
+</header>
+
+            <div class="container">
+                 <div class="hero-pic">
+                    <img src="images/GABRIEL.png" alt="profile pic">
+                 </div>
+                 <div class="hero-text">
+                    <h5>Hi I'm <span class="input">Frontend Developer</span></h5>
+                    <h1>Gabriel Oyibo</h1>
+                    <p>I’m a software engineer focused on building reliable, user-centered web applications
+                       that solve real problems. I enjoy working across the stack from crafting clean,
+                       accessible frontends to designing scalable backend APIs.
+
+                       Currently, I’m focused on full-stack JavaScript (React, Node.js, MongoDB) and building
+                       production-ready applications that mirror real-world engineering workflows.
+                    </p>
+
+                    <div class="btn-group">
+                       <a href="Assets/cv/CV update.pdf" class="btn active" download>
+                        Download CV
+                       </a>
+                       <a href="contact.html" class="btn">Contact</a>
+                    </div>
+
+                    <div class="social">
+                        <a href="https://www.facebook.com/dorga2308/" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com/in/oghenevokeoyibo/" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/gabriel_realm/" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://x.com/gabriel_realm" title="X"><i class="fa-brands fa-X"></i></a>
+                        <a href="https://pin.it/1X8Y5HRM9" title="Pinterest"><i class="fa-brands fa-pintrest"></i></a>
+                    </div>
+                 </div>
+            </div>
+        </div>
+     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     <!---typed js for typing text effect-->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+     <script>
+        /** creating button click show hide navbar **/
+        var togglebtn=document.querySelector(".togglebtn");
+        var nav=document.querySelector(".navlinks");
+        var links=document.querySelector(".navlinks li");
+
+        togglebtn.addEventListener("click", function(){
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+        })
+
+        var typed=new Typed(".input",{
+            strings:["Frontend Developer","Web Developer", "Software Engineer"],
+            typedSpeed:70,
+            backSpeed:55,
+            loop:true
+        })
+     </script>
+</body>
+</html>
