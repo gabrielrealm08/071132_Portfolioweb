@@ -19,3 +19,53 @@ toggle?.addEventListener("click", () => {
   const isLight = document.body.classList.contains("light");
   setTheme(isLight ? "dark" : "light");
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Mobile menu toggle
+const menuToggle = document.getElementById("menuToggle");
+const navMenu = document.getElementById("navMenu");
+
+if (menuToggle && navMenu) {
+  const setExpanded = (isOpen) => {
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+  };
+
+  menuToggle.addEventListener("click", () => {
+    const isOpen = navMenu.classList.toggle("open");
+    setExpanded(isOpen);
+  });
+
+  // Optional: close menu when clicking any nav link
+  navMenu.querySelectorAll("a").forEach((a) => {
+    a.addEventListener("click", () => {
+      navMenu.classList.remove("open");
+      setExpanded(false);
+    });
+  });
+}

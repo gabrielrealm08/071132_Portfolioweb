@@ -3,7 +3,7 @@
   --card: #1e1e1e;
   --text: #e5e5e5;
   --muted: #b5b5b5;
-  --primary: #007ced;
+  --primary: #ffffff;
 }
 
 body.light {
@@ -11,7 +11,7 @@ body.light {
   --card: #ffffff;
   --text: #1a1a1a;
   --muted: #555;
-  --primary: #007ced;
+  --primary: #ffffff;
 }
 
 body {
@@ -129,7 +129,7 @@ body {
 
 
 .btn.active{
-    border-color: #007ced;
+    border-color: #000000;
 }
 
 
@@ -143,7 +143,7 @@ body {
 }
 
 .btn.active {
-  border-color: #007ced;
+  border-color: #000000;
 }
 
 
@@ -255,7 +255,7 @@ body {
 .wrapper{
     width:1280px;
     max-width: 95%;
-    margin: 0 auto;
+  margin: 0 auto;
     padding: 0 20px;
 }
 header{
@@ -510,4 +510,148 @@ nav .navlinks li a{
   width: 100%;
   border-radius: 8px;
   margin-bottom: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------- Responsive base ---------- */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.wrapper {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+/* Header layout */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+/* Make nav horizontal on desktop */
+.navlinks {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navlinks a {
+  text-decoration: none;
+}
+
+/* Hamburger hidden on desktop */
+.menu-toggle {
+  display: none;
+  border: none;
+  background: transparent;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* Hero content */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.hero-pic {
+  flex: 0 0 320px;
+  max-width: 320px;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+/* Buttons wrap on small screens */
+.btn-group {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Social icons wrap on small screens */
+.social {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* ---------- Mobile / Tablet ---------- */
+@media (max-width: 900px) {
+  /* Stack hero */
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-pic {
+    max-width: 220px;
+    flex: 0 0 auto;
+  }
+
+  /* Show hamburger */
+  .menu-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  }
+
+  /* Turn nav into dropdown */
+  nav#navMenu {
+    position: absolute;
+    top: 75px;         /* adjust if your header is taller */
+    right: 4%;
+    width: min(260px, 92vw);
+    background: rgba(20, 20, 20, 0.95);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 12px;
+    padding: 10px;
+    display: none;     /* hidden by default */
+    z-index: 999;
+  }
+
+  nav#navMenu.open {
+    display: block;
+  }
+
+  .navlinks {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+  }
+
+  .navlinks li a {
+    display: block;
+    padding: 10px 12px;
+    border-radius: 10px;
+  }
+
+  .navlinks li a:hover {
+    background: rgba(255,255,255,0.08);
+  }
 }
